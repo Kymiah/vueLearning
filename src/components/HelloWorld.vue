@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div style="display: -webkit-box; margin-left: auto; margin-right: auto; width: 300px;">
+      <input type="text" id="txtName">
+      <div id="btnOk" v-on:click="btnClick">ok</div>
+    </div>
     
   </div>
 </template>
@@ -39,6 +43,9 @@ export default {
           this.alteracoes = Math.floor((Math.random() * 10) + 1);
           // console.log (this.alteracoes);
       }, 1000);
+    },
+    btnClick(){
+      alert(document.getElementById("txtName").value);
     }
   },
 }
@@ -59,5 +66,20 @@ li {
 }
 a {
   color: #42b983;
+}
+
+
+#btnOk{
+  width: 60px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #ccd8e4;
+  color: #4d6a87;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#btnOk:hover{
+  background-color: #f2f2f2;
 }
 </style>
