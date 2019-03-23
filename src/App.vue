@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <ImageComponent/>
     <HelloWorld/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
+import ImageComponent from './components/ImageComponent'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    ImageComponent
   }
 }
+
 </script>
 
 <style>
@@ -24,5 +27,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#imgId{
+  transition: 1s;
+  -webkit-transition: 1s;
 }
 </style>
