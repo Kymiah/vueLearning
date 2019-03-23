@@ -31,7 +31,7 @@ export default {
       }
     }
   },
-  mounted : ()=>{
+  mounted : function(){
     this.teste()     
   },
   beforeDestroy (){

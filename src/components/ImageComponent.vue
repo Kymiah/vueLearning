@@ -1,6 +1,6 @@
 <template>
-  <div id="imgId" class="image">
-     <img :src="nomaDaImagem" alt="Imagem"/>
+  <div id="imgId" class="imageBox">
+     <img :src="nomaDaImagem" alt="Imagem" class="image"/>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
       nomaDaImagem: require('../assets/logo.png')
     }
   },
-  mounted : ()=>{
+  mounted : function (){
     this.teste()     
   },
   methods : {
@@ -40,5 +40,7 @@ export default {
 
 
 <style scoped>
-
+.image{
+  mix-blend-mode: luminosity;
+}
 </style>
