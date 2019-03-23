@@ -21,26 +21,26 @@ export default {
       msg: 'Welcome to Your Vue.js App ',
     }
   },
-  computed:{
-    alteracoes : {
-      get(){
-          return this.msg;
-      },
-      set(v){
-          this.msg =  v;
-      }
-    }
-  },
-  mounted : function(){
+  // computed:{
+  //   alteracoes : {
+  //     get(){
+  //         return this.msg;
+  //     },
+  //     set(v){
+  //         this.msg =  v;
+  //     }
+  //   }
+  // },
+  created(){
     this.teste()     
   },
-  beforeDestroy (){
-    clearInterval(this.intervalid1)
-  },
+  // beforeDestroy (){
+  //   clearInterval(this.intervalid1)
+  // },
   methods : {
     teste(){          
       this.intervalid1 = setInterval(() => {
-          this.alteracoes = Math.floor((Math.random() * 10) + 1);
+          this.msg = Math.floor((Math.random() * 10) + 1);
           // console.log (this.alteracoes);
       }, 1000);
     },
