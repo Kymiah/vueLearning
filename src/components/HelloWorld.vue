@@ -31,10 +31,10 @@ export default {
       }
     }
   },
-  mounted : function(){
+  mounted : ()=>{
     this.teste()     
   },
-  beforeDestroy () {
+  beforeDestroy (){
     clearInterval(this.intervalid1)
   },
   methods : {

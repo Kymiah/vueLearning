@@ -11,24 +11,28 @@ export default {
     return {
       nomaDaImagem: require('../assets/logo.png')
     }
-  }
-}
+  },
+  mounted : ()=>{
+    this.teste()     
+  },
+  methods : {
+    getRandomColor(){          
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
 
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
-window.onload = function() {
-  var i = setInterval(function(){
-    // do your thing
-    document.getElementById("imgId").style.backgroundColor = getRandomColor();
-}, 200);
-  
+      console.log('color');
+      return color;
+    },
+    teste(){
+      this.intervalid1 = setInterval(() => {
+          document.getElementById("imgId").style.backgroundColor = this.getRandomColor();
+          // console.log (this.alteracoes);
+      }, 500);
+    }
+  },
 }
 
 
